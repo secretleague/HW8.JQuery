@@ -1,14 +1,23 @@
 extends layout.pug
 
 block content
-  ul
-    li
-      img(src="http://placekitten.com/600/400")
-    li
-      img(src="http://placekitten.com/600/400")
-    li
-      img(src="http://placekitten.com/600/400")
-    li
-      img(src="http://placekitten.com/600/400")
+  .slider-wrapper
+    ul.slider__nav-dots
+        li.slider__dot.slider__dot--active
+        li.slider__dot
+        li.slider__dot   
+        li.slider__dot
+    .slider-button.slider__previous-button 
+    .slider-button.slider__next-button
+    ul.slider
+      
+      li.slider__img.slider__img--visible
+        img(src="http://placekitten.com/g/600/400")
+      li.slider__img
+        img(src="http://placekitten.com/600/400")
+      li.slider__img
+        img(src="http://album.foto.ru/photos/pr0/173287/157056.jpg")
+      li.slider__img
+        img(src="http://placekitten.com/600/400")
 
   
