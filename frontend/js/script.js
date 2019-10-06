@@ -1,13 +1,21 @@
+const $ = require('jQuery');
 
-$(function() {
+
+
+export default   $(function() {
+    let $images;
+    let $visibleImageIndex;
+    let $visibleImage;
+    let $activeDot;
     getImages()
     getVisibleImage()
     getVisibleImageIndex()
-
+    
     let $slider = $('.slider-wrapper');
     let $navButtons = $('.slider-button');
     let $imagesQuantity = $images.length;
     let $dots = $('.slider__dot');
+    
     
     function setVisibleImage(i) {
 
@@ -28,19 +36,22 @@ $(function() {
     }
 
     function getImages() {
-        return $images = $('.slider__img'); 
+        $images = $('.slider__img'); 
     }
 
     function getVisibleImageIndex() {
-        return $visibleImageIndex = $images.index($visibleImage);
+        $visibleImageIndex = $images.index($visibleImage); 
+        
     }
 
     function getVisibleImage() {
-        return $visibleImage = $('.slider__img--visible');
+        $visibleImage = $('.slider__img--visible');
+        
     }
 
     function getactiveDot() {
-        return $activeDot = $('.slider__dot--active');
+        $activeDot = $('.slider__dot--active');
+        
     }
   
     $dots.mouseenter(function(e) {
